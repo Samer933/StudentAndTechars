@@ -53,7 +53,7 @@ namespace MVC.Controllers
             //       select x).FirstOrDefault();
            
             Room obj = new Room();
-            obj.rommName = "Sal33";
+            obj.rommName = "Sal55";
             obj.isAvailable = false;
             obj.Location = "Örebro";
             obj.roomSize = 16;
@@ -63,15 +63,15 @@ namespace MVC.Controllers
 
 
 
-            db.Rooms.Add(new Models.Room
-            {
-                rommName = "Sal77",
-                isAvailable = true,
-                Location = "Västerås",
-                roomSize = 65
+            //db.Rooms.Add(new Models.Room
+            //{
+            //    rommName = "Sal77",
+            //    isAvailable = true,
+            //    Location = "Västerås",
+            //    roomSize = 65
 
 
-            }) ;
+            //}) ;
 
 
             db.SaveChanges();
@@ -114,6 +114,7 @@ namespace MVC.Controllers
             Obj.roomSize = 43 ;
 
 
+            db.SaveChanges();
             return View("Index");
         }
 

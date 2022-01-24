@@ -9,16 +9,14 @@ namespace MVC.Controllers
 {
     public class TeacherController : Controller
     {
-     
-        private mvcDbContext db;
+        mvcDbContext db = new mvcDbContext();
 
-        public TeacherController()
+       
+        public ActionResult Index()
         {
 
-
-            db = new mvcDbContext();
+            return View();
         }
-
 
 
         public ActionResult GetDetails()
