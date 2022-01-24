@@ -26,7 +26,7 @@ namespace MVC.Controllers
                 Rooms.Add(i);
 
             }
-            return View();
+            return View("RoomDetails");
         }
  
 
@@ -55,16 +55,20 @@ namespace MVC.Controllers
             Room obj = new Room();
             obj.rommName = "Sal33";
             obj.isAvailable = false;
+            obj.Location = "Örebro";
+            obj.roomSize = 16;
 
             db.Rooms.Add(obj);
 
-           
+
 
 
             db.Rooms.Add(new Models.Room
             {
                 rommName = "Sal77",
-                isAvailable = true 
+                isAvailable = true,
+                Location = "Västerås",
+                roomSize = 65
 
 
             }) ;
@@ -73,7 +77,7 @@ namespace MVC.Controllers
             db.SaveChanges();
 
 
-            return View();
+            return View("Index");
         }
 
         public ActionResult DeleteRoom(int id )
@@ -91,20 +95,30 @@ namespace MVC.Controllers
 
             db.Rooms.Remove(DeletedRoom);
 
-
-
-
-
-
-            return View();
+            return View("Index");
 
         }
 
+        public ActionResult UpdateRoom(int id)
+        {
+
+            Room Obj = new Room();
+            Obj = (from x in db.Rooms
+
+                   where x.roomId == id
+                   select x).FirstOrDefault();
+
+            Obj.rommName = "Sal 899";
+            Obj.isAvailable = false;
+            Obj.Location = "Örebro";
+            Obj.roomSize = 43 ;
 
 
+            return View("Index");
+        }
 
-
-
+ 
+        
 
     }
 }
