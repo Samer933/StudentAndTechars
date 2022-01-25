@@ -1,7 +1,77 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
+﻿@model  List<MVC.Models.Room>
 
-<h2>Index</h2>
 
+@Styles.Render("~/MyDesign");
+
+
+
+@foreach (var item in Model)
+{
+
+
+<div class="container">
+    <div class="well well-sm">
+        <strong>Display</strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-th-list">
+                </span>List
+            </a> <a href="#" id="grid" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-th"></span>Grid
+            </a>
+        </div>
+    </div>
+    <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        @item.rommName
+                    </h4>
+                    <p class="group inner list-group-item-text">
+                        @item.Location
+                    </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                @item.roomSize
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">
+                                    @item.isAvailable
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6">
+                                    <p class="lead">
+                                        @item.roomId
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                    }
+
+                                    @*<table>
+                <tr>
+                    <td> @ViewBag.Message1</td>
+                <tr>
+                    <td> @ViewBag.Message2</td>
+                <tr>
+                    <td> @ViewBag.Message3</td>
+                <tr>
+                    <td> @ViewBag.Message4</td>
+                <tr>
+                    <td> @ViewBag.Message5</td>
+                </tr>
+            </table>*@

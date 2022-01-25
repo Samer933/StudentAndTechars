@@ -24,7 +24,20 @@ namespace MVC
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+
+                      "~/Content/MyDesign/RoomsStyle.css",
+
                       "~/Content/site.css"));
+
+
+            bundles.Add(new StyleBundle("~/MyDesign").Include(
+                
+                "~/Content/MyDesign/RoomsStyle.css"
+                
+                ));
+
+
+
         }
     }
 }

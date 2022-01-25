@@ -17,7 +17,7 @@ namespace MVC.Controllers
             db = new mvcDbContext();
         }
 
-        public ActionResult getCourses()
+        public ActionResult Index()
         {
             List<Course> CourseList = new List<Course>();
 
@@ -61,11 +61,21 @@ namespace MVC.Controllers
             obj.courseName = "Data";
             obj.isAvailable = true;
 
+
+
+
+
             db.Courses.Add(obj);
+
+
+            ViewBag.Message1 ="Course Name is " + obj.courseName;
+            ViewBag.Message2 = "is Available " + obj.isAvailable;
+
+
             db.SaveChanges();
 
 
-            return View("Courses");
+            return View("Course");
 
         }
 

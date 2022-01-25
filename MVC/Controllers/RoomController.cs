@@ -15,7 +15,7 @@ namespace MVC.Controllers
         {
             db = new mvcDbContext();
         }  
-       public ActionResult GetRooms()
+       public ActionResult RoomDetails()
         {
            // List<Room> Roomm = new List<Room>(); 
             
@@ -26,7 +26,7 @@ namespace MVC.Controllers
                 Rooms.Add(i);
 
             }
-            return View("RoomDetails");
+            return View("RoomDetails",Rooms);
         }
  
 
@@ -40,7 +40,18 @@ namespace MVC.Controllers
                      select x).FirstOrDefault();
 
 
-            return View("RoomDetails");
+            List<Room> List = new List<Room>();
+            List.Add(rooms);
+
+
+            //ViewBag.Message1 = rooms.roomId;
+            //ViewBag.Message2 = rooms.rommName;
+           
+            //ViewBag.Message3 = rooms.Location;
+            //ViewBag.Message4 = rooms.isAvailable;
+            //ViewBag.Message5 = rooms.roomSize;
+
+            return View("Index", List);
 
         }
 
