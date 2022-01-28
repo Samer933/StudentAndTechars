@@ -58,8 +58,9 @@ namespace MVC.Controllers
         {
             Course obj = new Course();
 
-            obj.courseName = "Data";
+            obj.courseName = "datttttttta";
             obj.isAvailable = true;
+            
 
 
 
@@ -68,14 +69,12 @@ namespace MVC.Controllers
             db.Courses.Add(obj);
 
 
-            ViewBag.Message1 ="Course Name is " + obj.courseName;
-            ViewBag.Message2 = "is Available " + obj.isAvailable;
 
 
             db.SaveChanges();
 
 
-            return View("Course");
+            return View("Course", obj);
 
         }
 
