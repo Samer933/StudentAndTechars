@@ -17,7 +17,7 @@ namespace MVC.Controllers
             db = new mvcDbContext();
         }
 
-        public ActionResult Index()
+        public ActionResult List()
         {
             List<Course> CourseList = new List<Course>();
 
@@ -36,7 +36,7 @@ namespace MVC.Controllers
             }
 
 
-            return View("Index");
+            return View(obj);
         }
         public ActionResult GetCourse(int id)
         {
@@ -49,7 +49,7 @@ namespace MVC.Controllers
 
             //Education teEdu = _context.Educations.Where(x => x.Title == education.Title).FirstOrDefault();
 
-            return View("Details");
+            return View(obj);
 
 
         }
@@ -58,7 +58,7 @@ namespace MVC.Controllers
         {
             Course obj = new Course();
 
-            obj.courseName = "datttttttta";
+            obj.courseName = "ComputerScience";
             obj.isAvailable = true;
             
 

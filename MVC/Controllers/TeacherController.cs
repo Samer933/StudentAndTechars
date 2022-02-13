@@ -32,10 +32,39 @@ namespace MVC.Controllers
             {
                 teachers.Add(i);
             }
-            return View();
+            return View("GetDetails",list);
 
         }
         
+       [HttpGet] // We return the view only
+        public ActionResult addTeacher()
+        {
+
+
+
+
+            return View("addTeacher");   
+                
+}
+
+
+
+
+[HttpPost] // This to send the data from the view to the database in order to save it
+        public ActionResult addTeacher(Teacher teacher)
+        {
+
+
+            db.Teachers.Add(teacher);
+
+            db.SaveChanges();
+
+
+
+            return RedirectToAction("GetDetails");
+        }
+
+
         public ActionResult Insert()
         {
             Teacher obj = new Teacher();
@@ -47,12 +76,12 @@ namespace MVC.Controllers
 
 
 
-            db.Teachers.Add(new Models.Teacher
-            {
-                teacherName = "Mzzz",
-                teacherNo = "64"
-            }
-            ) ;
+            //db.Teachers.Add(new Models.Teacher
+            //{
+            //    teacherName = "Mzzz",
+            //    teacherNo = "64"
+            //}
+            //) ;
             db.SaveChanges();
             
             return View();

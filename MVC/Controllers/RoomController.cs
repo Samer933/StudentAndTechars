@@ -64,10 +64,10 @@ namespace MVC.Controllers
             //       select x).FirstOrDefault();
            
             Room obj = new Room();
-            obj.rommName = "Sal55";
+            obj.rommName = "Sal12345";
             obj.isAvailable = false;
-            obj.Location = "Örebro";
-            obj.roomSize = 16;
+            obj.Location = "Kumla";
+            obj.roomSize = 199;
 
             db.Rooms.Add(obj);
 

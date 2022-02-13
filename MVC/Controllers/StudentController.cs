@@ -65,14 +65,14 @@ namespace MVC.Controllers
             db.Students.Add(obj);
 
 
-            db.Students.Add(new Models.Student
-            {
+            //db.Students.Add(new Models.Student
+            //{
 
-                studentNo = "32",
-                studentName = "Stevan"
+            //    studentNo = "32",
+            //    studentName = "Stevan"
 
 
-            });
+            //});
 
 
 

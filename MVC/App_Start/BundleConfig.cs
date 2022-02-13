@@ -36,6 +36,15 @@ namespace MVC
                 
                 ));
 
+            bundles.Add(new StyleBundle("~/NavDesign").Include(
+
+                "~/Content/MyDesign/NavDesign.css"));
+
+
+            bundles.Add(new StyleBundle("~/TeacherDesign").Include(
+
+                "~/Content/MyDesign/TeacherDesign.css"));
+
 
 
         }

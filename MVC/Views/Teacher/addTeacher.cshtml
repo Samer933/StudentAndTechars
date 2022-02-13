@@ -1,0 +1,28 @@
+﻿@*<link href="~/Content/MyDesign/TeacherDesign.css" rel="stylesheet" />*@
+
+
+@using (Html.BeginForm("addTeacher", "Teacher", FormMethod.Post))
+
+
+{
+    @Styles.Render("~/TeacherDesign")
+ 
+
+
+
+    <label for="fname">Teacher Name</label>
+    <input type="text" name="teacherName">
+    <label for="lname">Teacher Number</label>
+    <input type="text" name="teacherNo">
+
+    <input type="submit" class="buttonSubmit" value="Add teacher" />
+
+
+
+
+}
+
+
+
+
+
