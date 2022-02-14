@@ -103,6 +103,7 @@ namespace MVC.Controllers
             return View();
         }
 
+     
 
         public ActionResult Delete(int id)
         {
@@ -116,7 +117,20 @@ namespace MVC.Controllers
             db.SaveChanges();
 
 
-            return View();
+
+
+
+            //Teacher teach = new Teacher();
+
+            //teach = (from data in db.Teachers
+            //         where data.teacherId == id
+            //         select data).FirstOrDefault();
+
+
+
+
+
+            return RedirectToAction("GetDetails");
 
         }
 
