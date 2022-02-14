@@ -22,15 +22,11 @@ namespace MVC.Controllers
         {
             //Student i = db.Students.Find(id);
 
-
-
-
-
-
             Student obj = (from x in db.Students
                         where x.studentId == id
                         select x).FirstOrDefault();
 
+           
             return View();
 
         }
@@ -51,18 +47,35 @@ namespace MVC.Controllers
 
             list = (from x in db.Students select x).ToList();
 
-            return View("Index");
+
+
+
+            return View(list);
+
         }
 
 
-        public ActionResult Insert ()
+
+        [HttpGet]
+        public ActionResult Insert()
         {
-            Student obj = new Student();
+         return View();
+        }
 
-            obj.studentName = "Kalle";
-            obj.studentNo = "54";
 
-            db.Students.Add(obj);
+
+
+
+
+          [HttpPost]
+        public ActionResult Insert (Student student)
+        {
+            //Student obj = new Student();
+
+            //obj.studentName = "Kalle";
+            //obj.studentNo = "54";
+
+            db.Students.Add(student);
 
 
             //db.Students.Add(new Models.Student

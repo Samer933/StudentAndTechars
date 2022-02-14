@@ -29,8 +29,8 @@
             @Html.DisplayFor(modelItem => item.teacherNo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.teacherId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.teacherId }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.teacherId }) 
+            @Html.ActionLink("Details", "Details", new { id=item.teacherId }) 
             @*@Html.ActionLink("Delete", "Delete", new { id=item.teacherId })*@
             <a href="/Teacher/Delete/@item.teacherId">Delete</a>
         </td>
