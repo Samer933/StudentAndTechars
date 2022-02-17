@@ -59,7 +59,7 @@ namespace MVC.Controllers
         [HttpGet]
         public ActionResult Insert()
         {
-         return View();
+         return View("Insert");
         }
 
 
@@ -92,7 +92,7 @@ namespace MVC.Controllers
             db.SaveChanges();
 
 
-            return View();
+            return RedirectToAction("GetStudents");
         }
 
         public ActionResult Update(int id)

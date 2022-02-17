@@ -1,18 +1,27 @@
 ﻿@model  List<MVC.Models.Student>
 
-
-
+@{
+    ViewBag.Title = "GetDetails";
+}
+<h2></h2>
 
 @foreach (var item in Model)
 {
+    <tr>
 
 
-    @Html.DisplayNameFor(Model => item.studentId)
+        <td>
 
-    @Html.DisplayNameFor(Model => item.studentName)
+            @Html.DisplayFor(modelItem => item.studentId)
+        </td>
+        <td>
 
-    @Html.DisplayNameFor(Model => item.studentNo)
+            @Html.DisplayFor(modelItem => item.studentName)
+        </td>
+        <td>
 
-
+            @Html.DisplayFor(modelItem => item.studentNo)
+        </td>
+    </tr>
 }
 

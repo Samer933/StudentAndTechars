@@ -47,6 +47,12 @@ namespace MVC
 
 
 
+
+            bundles.Add(new StyleBundle("~/Student").Include(
+                "~/Content/MyDesign/Student.css"));
+
+
+
         }
     }
 }
