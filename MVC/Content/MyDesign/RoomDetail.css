@@ -1,0 +1,13 @@
+﻿.s {
+    width: 10%;
+    color: darkgrey;
+}
+
+.RoomDetails {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: burlywood;
+    text-align: left;
+    opacity: 0.9 ;
+    transition: all 5s;
+}

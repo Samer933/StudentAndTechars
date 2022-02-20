@@ -32,7 +32,7 @@ namespace MVC.Controllers
 
         public ActionResult GetDetails(int id)
         {
-           //Room obj = db.Rooms.Find(id);
+           Room obj = db.Rooms.Find(id);
 
             Room rooms = new Room();
             rooms = (from x in db.Rooms
@@ -51,25 +51,48 @@ namespace MVC.Controllers
             //ViewBag.Message4 = rooms.isAvailable;
             //ViewBag.Message5 = rooms.roomSize;
 
-            return View("Index", List);
+            return View("GetDetails", obj);
 
         }
 
-        public ActionResult InsertRoom()
+
+        [HttpGet]
+        public ActionResult Insert()
         {
 
+
+
+
+            return View();
+        }
+
+
+
+        [HttpPost]
+        public ActionResult Insert(Room room)
+        {
+
+
+
+            db.Rooms.Add(room);
+
+            db.SaveChanges();
+
+
+
+            return RedirectToAction("Insert");
 
             //obj = (from x in db.Rooms
             //       where x.roomId == RoomId
             //       select x).FirstOrDefault();
-           
-            Room obj = new Room();
-            obj.rommName = "Sal12345";
-            obj.isAvailable = false;
-            obj.Location = "Kumla";
-            obj.roomSize = 199;
 
-            db.Rooms.Add(obj);
+            //Room obj = new Room();
+            //obj.rommName = "Sal12345";
+            //obj.isAvailable = false;
+            //obj.Location = "Kumla";
+            //obj.roomSize = 199;
+
+            //db.Rooms.Add(obj);
 
 
 
@@ -85,10 +108,7 @@ namespace MVC.Controllers
             //}) ;
 
 
-            db.SaveChanges();
 
-
-            return View("Index");
         }
 
         public ActionResult DeleteRoom(int id )

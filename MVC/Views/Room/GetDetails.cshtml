@@ -1,0 +1,36 @@
+﻿@model MVC.Models.Room
+
+
+@Styles.Render("~/RoomDeta");
+
+
+
+<h2 class="s">GetDetails</h2>
+
+<div class="RoomDetails">
+
+    <ul class="RoomDetails">
+        
+        <li  class="RoomDetails" > @Html.DisplayName("Room Id :") @Model.roomId </li>
+        <li>  @Html.DisplayName("Room Name :")  @Model.rommName</li>
+        <li> @Html.DisplayName("Room Size :")  @Model.roomSize</li>
+        <li> @Html.DisplayName("Room Location :") @Model.Location </li>
+        <li> @Html.DisplayName("Room Avaliability :")  @Model.isAvailable</li>
+
+
+
+    </ul>
+
+    @*<td> @Html.DisplayName("Room Id :") +" "+ </td>
+
+    <td> @Html.DisplayName("Room Name :") +" "+ </td>
+
+    <td>@Html.DisplayName("Room Size :") +" "+</td>
+
+    <td>  @Html.DisplayName("Room Location :") +" "+ </td>
+
+    <td>  @Html.DisplayName("Room Avaliability :") +" "+</td>*@
+</div>
+
+
+

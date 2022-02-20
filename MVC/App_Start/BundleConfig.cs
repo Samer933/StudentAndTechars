@@ -30,7 +30,7 @@ namespace MVC
                       "~/Content/site.css"));
 
 
-            bundles.Add(new StyleBundle("~/MyDesign").Include(
+            bundles.Add(new StyleBundle("~/RoomDesign").Include(
                 
                 "~/Content/MyDesign/RoomsStyle.css"
                 
@@ -51,6 +51,12 @@ namespace MVC
             bundles.Add(new StyleBundle("~/Student").Include(
                 "~/Content/MyDesign/Student.css"));
 
+
+            bundles.Add(new StyleBundle("~/RoomDeta").Include(
+
+            "~/Content/MyDesign/RoomDetail.css"
+
+            ));
 
 
         }
