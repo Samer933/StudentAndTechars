@@ -2,7 +2,7 @@
 
     @*we link to th css file either*@
 
-<link href="~/Content/MyDesign/RoomsStyle.css" rel="stylesheet" />
+@*<link href="~/Content/MyDesign/RoomsStyle.css" rel="stylesheet" />*@
 
 @*OR by doing bundle*@
 
@@ -11,52 +11,31 @@
 
 @foreach(var item in Model)
  {
-   <div class="container">
-    <div class="well well-sm">
-        <strong>Display</strong>
-        <div class="btn-group">
-            <a href="#" id="list" class="btn btn-default btn-sm">
-                <span class="glyphicon glyphicon-th-list">
-                </span>List
-            </a> <a href="#" id="grid" class="btn btn-default btn-sm">
-                <span class="glyphicon glyphicon-th"></span>Grid
-            </a>
-        </div>
-    </div> 
-    <div id="products" class="row list-group">
-        <div class="item  col-xs-4 col-lg-4">
-            <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-                <div class="caption">
-                    <h4 class="group inner list-group-item-heading">
-                       @item.rommName
-                    </h4>
-                    <p class="group inner list-group-item-text">
-                     @item.Location
-                    </p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <p class="lead">
-                              @item.roomSize
-                            </p>
-                        </div>
+   <div class="continer">
 
 
-                        <div class="col-xs-12 col-md-6">
+     
+   
+   
+   
+   </div> 
+    
+   <div class="a"></div>
+  
+           <div class="box">
+
+           <h4 class="group inner list-group-item-heading">
+               @Html.DisplayName("Rome Name : ")
+               @item.rommName
+           </h4>
+           <h4 class="group inner list-group-item-text">
+               @Html.DisplayName("Location :")
+               @item.Location
+           </h4>
+           <div>   <a>@Html.ActionLink("RoomDetails", "GetDetails", new { @id = item.roomId }, new { @class = "btn btn-success" })</a> </div>
 
 
-                           <a class="btn btn-success" , @Html.ActionLink("RoomDetails", "GetDetails", new { @id = item.roomId }, new { @class = "btn btn-success" })></a>
+           @*<a class="btn btn-success" , href="~/Room/GetDetails/@item.roomId">Details</a>*@
 
-
-
-                            @*<a class="btn btn-success" , href="~/Room/GetDetails/@item.roomId">Details</a>*@
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       </div>
-</div>
-
+           </div>
  }
