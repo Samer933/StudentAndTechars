@@ -5054,7 +5054,7 @@ a.badge:focus {
 .container-fluid .jumbotron {
   padding-right: 15px;
   padding-left: 15px;
-  border-radius: 6px;
+  border-radius: 100px;
 }
 .jumbotron .container {
   max-width: 100%;
@@ -5071,7 +5071,7 @@ a.badge:focus {
   }
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 63px;
+    font-size: 70px;
   }
 }
 .thumbnail {
@@ -6831,4 +6831,6 @@ button.close {
     display: none !important;
   }
 }
+
+
 /*# sourceMappingURL=bootstrap.css.map */

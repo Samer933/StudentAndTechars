@@ -1,7 +1,9 @@
 ﻿
-.wrapper{
-display : grid ;
-
+.wrapper {
+    float: right ;
+    width: auto;
+    padding : 0px ;
+    margin-top : 10% ;
 
 }
 

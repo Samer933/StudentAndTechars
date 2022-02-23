@@ -8,6 +8,7 @@
 
 @Styles.Render("~/RoomDesign")
 
+<link href="~/Content/MyDesign/RoomDetails2.css" rel="stylesheet" />
 
 @foreach(var item in Model)
  {
@@ -20,22 +21,30 @@
    
    </div> 
     
-   <div class="a"></div>
-  
-           <div class="box">
+   <div class="a">
+     
+       <div class="b">
+         
+           <div class="c">
+              
 
-           <h4 class="group inner list-group-item-heading">
-               @Html.DisplayName("Rome Name : ")
-               @item.rommName
-           </h4>
-           <h4 class="group inner list-group-item-text">
-               @Html.DisplayName("Location :")
-               @item.Location
-           </h4>
-           <div>   <a>@Html.ActionLink("RoomDetails", "GetDetails", new { @id = item.roomId }, new { @class = "btn btn-success" })</a> </div>
+               <div class="box">
+
+                   <h4 class="group inner list-group-item-heading">
+                       @Html.DisplayName("Room Name : ")
+                       @item.rommName
+                   </h4>
+                   <h4 class="group inner list-group-item-text">
+                       @Html.DisplayName("Location :")
+                       @item.Location
+                   </h4>
+                   <div><a >@Html.ActionLink("RoomDetails", "GetDetails", new { @id = item.roomId }, new { @class = "btn btn-success" })</a> </div>
 
 
-           @*<a class="btn btn-success" , href="~/Room/GetDetails/@item.roomId">Details</a>*@
+                   @*<a class="btn btn-success" , href="~/Room/GetDetails/@item.roomId">Details</a>*@
 
+               </div>
            </div>
+       </div>
+   </div>
  }

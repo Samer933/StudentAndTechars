@@ -2,16 +2,8 @@
     margin-right: 5px;
 }
 
-.box {
-
- color : white ;
- background-color :black ;
- box-shadow : 1px ;
- border-radius : initial ;
 
 
-}
- 
 
 .item.list-group-item {
     float: none;

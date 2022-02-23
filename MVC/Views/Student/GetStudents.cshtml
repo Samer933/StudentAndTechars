@@ -1,36 +1,33 @@
 ﻿@model  List<MVC.Models.Student>
 
-@{
-    ViewBag.Title = "GetDetails";
-}
-<h2 class="title">GetDetails</h2>
 
-<link href="~/Content/MyDesign/GetDetailsStudent.css" rel="stylesheet" />
+
+@Styles.Render("~/detail")
+
+
 
 
 @foreach (var item in Model)
 {
 
-<div class="list-group">
-    <tr>
+   <div id ="qqw">
+    
+
+    
 
 
-        <td>
             @Html.DisplayName("Student Id :")
             @Html.DisplayFor(modelItem => item.studentId)
-            <br />
-        </td>
-        <td>
+
+      
+
             @Html.DisplayName("Student Name :")
             @Html.DisplayFor(modelItem => item.studentName)
-            <br />
-        </td>
-        <td>
+       
             @Html.DisplayName("Student Number :")
             @Html.DisplayFor(modelItem => item.studentNo)
-            <br />
-        </td>
-    </tr>
-</div>
+      
+    
+      </div>
 }
 

@@ -87,20 +87,44 @@ namespace MVC.Controllers
             return View();
         }
     
-    
-        public ActionResult Update(int id)
+       
+        [HttpGet]
+        public ActionResult Edit (int id)
         {
             Teacher obj = new Teacher();
 
             obj = db.Teachers.Find(id);
 
-            obj.teacherName = "Melissa";
-            obj.teacherNo = "44";
+
+
+            ViewBag.Name = obj.teacherName;
+            ViewBag.Number = obj.teacherNo;
 
 
             db.SaveChanges();
 
-            return View();
+            return View(obj);
+        }
+
+    
+        [HttpPost]
+        public ActionResult Edit(Teacher teacher)
+        {
+           
+
+            //obj = db.Teachers.Find(id);
+
+            //obj.teacherName = "Melissa";
+            //obj.teacherNo = "44";
+
+
+
+            
+
+
+            db.SaveChanges();
+
+            return RedirectToAction("GetDetails");
         }
 
      

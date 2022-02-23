@@ -7,17 +7,18 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/NavDesign")
+    <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
 
     <div id="container">
-        <ul id="menu">
+        <ul id="menu" >
             <li>
                 <a href="/Home/Index">Home</a>
               
             </li>
             <li>
-                <a href="/Student/Index">Teachers</a>
+                <a href="/Teacher/GetDetails">Teachers</a>
                 <ul>
                     <li><a href="/Teacher/GetDetails">Get details for teachers</a></li>
                     <li><a href="/Teacher/addTeacher">Add teachers</a></li>
@@ -25,7 +26,7 @@
                 </ul>
             </li>
             <li>
-                <a href="/Student/Index">Students</a>
+                <a href="/Student/GetStudents">Students</a>
                 <ul>
                     <li><a href="/Student/GetStudents">Get details for students</a></li>
                     <li><a href="/Student/Insert">Add students</a></li>
@@ -33,7 +34,7 @@
                 </ul>
             </li>
             <li>
-                <a href="Room/GetDetails">Rooms</a>
+                <a href="/Room/RoomDetails">Rooms</a>
                 <ul>
                     <li><a href="/Room/RoomDetails">Get room details</a></li>
                     <li><a href="/Room/Insert">Add a new Room</a></li>
@@ -58,7 +59,7 @@
         @RenderBody()
        
         <footer>
-            <p>&copy; @DateTime.Now.Year - Programmer.se</p>
+            <p class="footer">&copy; @DateTime.Now - Programmer.se</p>
         </footer>
          </div>
 

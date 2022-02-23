@@ -171,6 +171,7 @@
     <Content Include="Content\MyDesign\GetDetailsStudent.css" />
     <Content Include="Content\MyDesign\NavDesign.css" />
     <Content Include="Content\MyDesign\RoomDetail.css" />
+    <Content Include="Content\MyDesign\RoomDetails2.css" />
     <Content Include="Content\MyDesign\RoomsStyle.css" />
     <Content Include="Content\MyDesign\Student.css" />
     <Content Include="Content\MyDesign\TeacherDesign.css" />
@@ -218,6 +219,7 @@
     <Content Include="Views\Student\Insert.cshtml" />
     <Content Include="Views\Room\Insert.cshtml" />
     <Content Include="Views\Room\GetDetails.cshtml" />
+    <Content Include="Views\Teacher\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

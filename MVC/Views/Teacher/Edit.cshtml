@@ -1,0 +1,30 @@
+﻿
+
+
+@model MVC.Models.Teacher
+
+
+
+
+
+   @using (Html.BeginForm("Edit", "Teacher", FormMethod.Post))
+{
+
+
+
+    <label for="fname ">Teacher Name </label>
+    <input type="text" name="teacherName" value= @ViewBag.Name required/>
+
+    <label for="Teacher Number">Teacher Number</label>
+    <input type="text" name="teacherNo" value= @ViewBag.Number required/>
+
+    <input type="submit" class="buttonSubmit" value="Update Teacher" />
+
+    
+}
+
+
+
+
+<h2>Edit</h2>
+
