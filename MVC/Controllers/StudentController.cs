@@ -97,6 +97,7 @@ namespace MVC.Controllers
 
         public ActionResult Update(int id)
         {
+
             Student obj = new Student();
 
             obj = db.Students.Find(id);

@@ -7,9 +7,16 @@ using System.Web.Mvc;
 
 namespace MVC.Controllers
 {
+
+  
     public class TeacherController : Controller
     {
+
+         int id  ;
+
+
         mvcDbContext db = new mvcDbContext();
+      
 
        
         public ActionResult Index()
@@ -91,6 +98,9 @@ namespace MVC.Controllers
         [HttpGet]
         public ActionResult Edit (int id)
         {
+
+           this.id = id;
+
             Teacher obj = new Teacher();
 
             obj = db.Teachers.Find(id);
@@ -110,18 +120,16 @@ namespace MVC.Controllers
         [HttpPost]
         public ActionResult Edit(Teacher teacher)
         {
-           
-
-            //obj = db.Teachers.Find(id);
-
-            //obj.teacherName = "Melissa";
-            //obj.teacherNo = "44";
 
 
+            Teacher obj = new Teacher();
 
+            obj = db.Teachers.Find(teacher.teacherId);
+
+            obj.teacherName = teacher.teacherName;
+
+            obj.teacherNo = teacher.teacherNo;
             
-
-
             db.SaveChanges();
 
             return RedirectToAction("GetDetails");

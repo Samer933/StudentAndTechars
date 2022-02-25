@@ -175,6 +175,7 @@
     <Content Include="Content\MyDesign\RoomsStyle.css" />
     <Content Include="Content\MyDesign\Student.css" />
     <Content Include="Content\MyDesign\TeacherDesign.css" />
+    <Content Include="Content\MyDesign\TeacherUpdateButton.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
