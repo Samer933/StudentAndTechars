@@ -1,10 +1,34 @@
 ﻿body {
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #F8F005;
+    background-color: antiquewhite;
 }
+
+input {
+    box-shadow: 1px 1px  1px 1px;
+    box-sizing: border-box ;
+    width: 100%;
+    height: 200%;
+    font-family: 'Bebas Neue', cursive ;
+    font-size: 150%;
+    background-color: cadetblue;
+    border-radius : 7px ;
+    margin : 10px;
+}
+
+label{
+
+
+  font-family : "Bebas Neue" ;
+  font-size : 20px ;
+   
+  color : darkslategray  ;
+
+
+}
+
+
 
 button, button::after {
     width: 380px;
@@ -20,6 +44,8 @@ button, button::after {
     outline: transparent;
     position: relative;
 }
+
+
 
     button::after {
         --slice-0: inset(50% 50% 50% 50%);
