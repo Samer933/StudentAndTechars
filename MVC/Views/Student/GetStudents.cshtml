@@ -7,27 +7,47 @@
 
 
 
-@foreach (var item in Model)
-{
 
-   <div id ="qqw">
-    
+<table class="table">
+    <tr>
+        <th>@Html.DisplayName("Student Id") </th>
+        <th> @Html.DisplayName("Student Name")  </th>
+        <th>@Html.DisplayName("Student Number") </th>
+    </tr>
 
-    
 
 
-            @Html.DisplayName("Student Id :")
-            @Html.DisplayFor(modelItem => item.studentId)
+    @foreach (var item in Model)
+    {
 
-      
+        <div>
 
-            @Html.DisplayName("Student Name :")
-            @Html.DisplayFor(modelItem => item.studentName)
-       
-            @Html.DisplayName("Student Number :")
-            @Html.DisplayFor(modelItem => item.studentNo)
-      
-    
-      </div>
-}
 
+
+        <tr class="comp">
+            <td>
+
+                @Html.DisplayFor(modelItem => item.studentId)
+
+            </td>
+
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.studentName)
+            </td>
+
+
+
+            <td>
+
+                @Html.DisplayFor(modelItem => item.studentNo)
+            </td>
+
+        </tr>
+
+        </div>
+
+    }
+
+</table>

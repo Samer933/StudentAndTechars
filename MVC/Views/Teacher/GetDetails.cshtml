@@ -4,24 +4,24 @@
     ViewBag.Title = "GetDetails";
 }
 
-<h2>GetDetails</h2>
+@Styles.Render("~/TeacherDesign")
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
-    <tr>
+    <tr class="q">
         <th>
-            @Html.DisplayNameFor(model => model.teacherName)
+            @Html.DisplayName("Teacher Name")
+            @*@Html.DisplayNameFor(model => model.teacherName)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.teacherNo)
+            @Html.DisplayName("Teacher Number")
+            @*@Html.DisplayNameFor(model => model.teacherNo)*@
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr class="compenent">
         <td>
             @Html.DisplayFor(modelItem => item.teacherName)
         </td>
@@ -29,10 +29,12 @@
             @Html.DisplayFor(modelItem => item.teacherNo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.teacherId }) 
+            @Html.ActionLink("Edit", "Edit", new { id = item.teacherId } , new {id = "id" })
+
+            @*@Html.ActionLink("Home", "Index", Nothing, New With {.style = "font-weight:bold;", .class = "someClass"})*@
 
             @*@Html.ActionLink("Delete", "Delete", new { id=item.teacherId })*@
-            <a href="/Teacher/Delete/@item.teacherId">Delete</a>
+            <a class="link" href="/Teacher/Delete/@item.teacherId">Delete</a>
         </td>
     </tr>
 }
