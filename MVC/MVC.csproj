@@ -221,6 +221,8 @@
     <Content Include="Views\Room\Insert.cshtml" />
     <Content Include="Views\Room\GetDetails.cshtml" />
     <Content Include="Views\Teacher\Edit.cshtml" />
+    <Content Include="Views\Course\InsertCourse.cshtml" />
+    <Content Include="Views\Course\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

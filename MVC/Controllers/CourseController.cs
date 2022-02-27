@@ -54,30 +54,33 @@ namespace MVC.Controllers
 
         }
 
+        [HttpGet]
         public ActionResult InsertCourse()
         {
-            Course obj = new Course();
-
-            obj.courseName = "ComputerScience";
-            obj.isAvailable = true;
-            
+           
 
 
 
+          
 
 
-            db.Courses.Add(obj);
+            return View();
 
+        }
 
+        [HttpPost]
+        public ActionResult InsertCourse(Course course)
+        {
+     
+            db.Courses.Add(course);
 
 
             db.SaveChanges();
 
 
-            return View("Course", obj);
 
+            return RedirectToAction("List");
         }
-
 
 
         //public ActionResult GetCourse(Course model)
@@ -110,38 +113,65 @@ namespace MVC.Controllers
             //db.Courses.Remove(obj);
 
 
+         //   Course obj = new Course();
+
+         //obj = db.Courses.Find(id);
+         //   db.Courses.Remove(obj);
+
+
 
             db.Courses.Remove(db.Courses.Find(id));
             db.SaveChanges();
-            return View();
+
+
+            return RedirectToAction("List");
         }
        
 
-        public ActionResult UpdateCourse(int id)
+        [HttpPost]
+        public ActionResult Edit(Course course)
         {
             Course obj = new Course();
 
-            obj = (from x in db.Courses
-                   where x.courseId == id
-                   select x).FirstOrDefault();
 
-            obj.courseName = "DataApplicaation" ;
+            obj = db.Courses.Find(course.courseId);
 
-
-
-            Course course = db.Courses.Find(id);
-            course.isAvailable = false;
+            obj.courseName = course.courseName;
+            obj.isAvailable = course.isAvailable;
 
 
 
+            //obj = (from x in db.Courses
+            //       where x.courseId == id
+            //       select x).FirstOrDefault();
+
+            //obj.courseName = "DataApplicaation" ;
+
+
+
+            //Course course = db.Courses.Find(id);
+            //course.isAvailable = false;
             db.SaveChanges();
 
 
-            return View("Courses");
+            return RedirectToAction("List");
 
         }
 
 
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            Course obj = new Course();
+            obj = db.Courses.Find(id);
+
+         
+
+
+
+            return View(obj);
+        }
 
 
 
