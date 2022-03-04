@@ -140,7 +140,7 @@ namespace MVC.Controllers
             db.SaveChanges();
 
 
-            return View();
+            return RedirectToAction ("GetStudents");
 
         }
 

@@ -43,11 +43,19 @@
 
                 @Html.DisplayFor(modelItem => item.studentNo)
             </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { @id = item.studentId })
+            </td>
 
+
+
+     
         </tr>
+       
 
         </div>
 
     }
+
 
 </table>
