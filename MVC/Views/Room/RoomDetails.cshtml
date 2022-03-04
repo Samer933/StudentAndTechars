@@ -21,30 +21,31 @@
    
    </div> 
     
-   <div class="a">
-     
-       <div class="b">
-         
-           <div class="c">
-              
-
+   <div class="nav-divider">
+  
                <div class="box">
 
-                   <h4 class="group inner list-group-item-heading">
-                       @Html.DisplayName("Room Name : ")
-                       @item.rommName
-                   </h4>
-                   <h4 class="group inner list-group-item-text">
-                       @Html.DisplayName("Location :")
-                       @item.Location
-                   </h4>
-                   <div><a >@Html.ActionLink("RoomDetails", "GetDetails", new { @id = item.roomId }, new { @class = "btn btn-success" })</a> </div>
+                   
+                       <li>
+
+                           @Html.DisplayName("Room Name : ")
+                           @item.rommName
+                       </li>
+
+
+                       <li>
+                       
+                           @Html.DisplayName("Location :")
+                           @item.Location
+                       </li>
+
+                   
+                   
+                   <div class="button1"><a >@Html.ActionLink("RoomDetails", "GetDetails", new { @id = item.roomId }, new { @class = "btn btn-success" })</a> </div>
 
 
                    @*<a class="btn btn-success" , href="~/Room/GetDetails/@item.roomId">Details</a>*@
 
-               </div>
-           </div>
        </div>
    </div>
  }

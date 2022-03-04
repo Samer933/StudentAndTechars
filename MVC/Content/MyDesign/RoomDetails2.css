@@ -1,16 +1,29 @@
 ﻿.box {
     color: gray;
-    box-shadow: 1px;
-    border-radius: initial 0 3px 4px;
+    box-shadow: 1px 10px 10px 1px ;
+   font-family  : "Bebas Neue" ;
+   font-size : medium ;
     float: left;
     margin: 10px;
-    width: max-content;
+    width: 70%;
     border-radius: 10px;
-    box-shadow: inset 0 1px 1px rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.15), 0 1px 3px rgba(0,0,0,.15);
+    background-color : antiquewhite ;
+    height : 35% ;
 }
 
-.a {
-    width: 10%;
-    height: 20%;
+.nav-divider {
+    width: 70%;
+    height: 35% ;
 }
 
+
+.button1{
+
+    margin : 10px ;
+  
+}
+
+body{
+
+    background-color : black ;
+}
