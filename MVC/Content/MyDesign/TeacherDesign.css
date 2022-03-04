@@ -3,11 +3,48 @@
 body{
 
 background-color : burlywood ;
+}
+
+
+.tab{
+    display : grid ; 
+    grid-auto-columns : 50px ;
+    grid-auto-rows : 10px ;
+
+}
+
+.add{
+    width : 100% ;
+    color : gray ;
+    letter-spacing : 2px ; 
+    font-family : 'Bebas Neue' ;
+    font-size : large ; 
+
+
+}
+
+
+.in{
+    box-shadow : 1px 10px 10px 1px ; 
+    box-sizing : border-box ;
+    border-radius  : 4px ; 
+    color : gray magenta ; 
 
 
 
 }
 
+
+.form{
+  display : grid ;
+  grid-auto-columns : 100% ;
+  grid-auto-rows : auto ;
+
+}
+
+
+.q {
+}
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -18,15 +55,16 @@ input[type=text] {
 
 .buttonSubmit {
     background-color: aqua ;
-    border: none;
+    border:  double ;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 1%;
     cursor: pointer;
+    
 }
 
 .table {
@@ -36,6 +74,7 @@ input[type=text] {
     color: mediumvioletred;
     font-size : 20px ; 
     letter-spacing : 2px ; 
+    
 
 }
 
