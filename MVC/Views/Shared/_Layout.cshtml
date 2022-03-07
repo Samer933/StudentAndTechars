@@ -7,15 +7,18 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/NavDesign")
+    @*@Scripts.Render("~/bundles/NavMobile")*@
+<link href="~/Content/MyDesign/navDesign2.css" rel="stylesheet" />
+    
     <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
 
     <div id="container">
-        <ul id="menu" >
+        <ul id="menu">
             <li>
                 <a href="/Home/Index">Home</a>
-              
+
             </li>
             <li>
                 <a href="/Teacher/GetDetails">Teachers</a>
@@ -38,37 +41,63 @@
                 <ul>
                     <li><a href="/Room/RoomDetails">Get room details</a></li>
                     <li><a href="/Room/Insert">Add a new Room</a></li>
-                  
+
                 </ul>
             </li>
             <li>
                 <a href="/Course/List">Courses</a>
-            
+
                 <ul>
-                    
+
                     <li> <a href="/Course/List">Get Courses</a></li>
                     <li><a href="/Course/InsertCourse">Add Course</a></li>
                 </ul>
-            
-            
             </li>
         </ul>
-   
+
+        <header>
+            <nav class="navbar">
+                <a href="#" class="nav-branding">Div</a>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="/Teacher/GetDetails" class="nav-link">Teacher</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Student/GetStudents" class="nav-link">Students</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Room/RoomDetails" class="nav-link">Room</a>
+                    </li>
+                </ul>
+                <div class="Hambur">
+
+                   
+                    <span class="bar"></span>
+                    <span class="bar">2</span>
+                    <span class="bar">3</span>
+
+
+                </div>
+
+
+            </nav>
+        </header>
 
 
 
-       <div class="container body-content">
-        @RenderBody()
-       
-        <footer>
-            <p class="footer">&copy; @DateTime.Now - Programmer &copy;</p>
-        </footer>
-         </div>
+        <div class="container body-content">
+            @RenderBody()
 
-      @Scripts.Render("~/bundles/jquery")
-      @Scripts.Render("~/bundles/bootstrap")
+            <footer>
+                <p class="footer">&copy; @DateTime.Now - Programmer &copy;</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
 
-        </div>
+    </div>
 </body>
 </html>

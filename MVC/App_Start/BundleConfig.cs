@@ -66,6 +66,9 @@ namespace MVC
                 "~/Content/MyDesign/TeacherUpdateButton.css"));
 
 
+            bundles.Add(new ScriptBundle("~/bundles/NavMobile").Include(
+               "~/Script/NavMobile.js"));
+
         }
     }
 }

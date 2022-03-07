@@ -134,3 +134,24 @@ body {
         border-bottom: dotted 1px rgba(255,255,255,.15);
         background: rgba(0,223,252,.02);
     }
+
+    @media (max-width : 768px){
+        #menu{
+
+            display : none ;
+        }
+
+    }
+
+    @media (min-width : 769px){
+        .Hamburger{
+
+            float : right ;
+            background-color : red ; 
+
+
+
+        }
+
+    }
+
