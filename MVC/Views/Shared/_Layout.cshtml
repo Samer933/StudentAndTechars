@@ -6,10 +6,10 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @Styles.Render("~/NavDesign")
-    @*@Scripts.Render("~/bundles/NavMobile")*@
-<link href="~/Content/MyDesign/navDesign2.css" rel="stylesheet" />
-    
+  
+    <link href="~/Content/MyDesign/navDesign2.css" rel="stylesheet" />
+    <link href="~/Content/MyDesign/NavDesign.css" rel="stylesheet" />
+   
     <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
 <body>
@@ -72,18 +72,26 @@
                 </ul>
                 <div class="Hambur">
 
-                   
-                    <span class="bar"></span>
-                    <span class="bar">2</span>
-                    <span class="bar">3</span>
-
-
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
                 </div>
-
-
             </nav>
         </header>
 
+
+
+
+        @*<script>
+
+            const i = document.getElementById("act");
+
+            i.addEventListener("click", function () {
+
+                document.getElementById("prov").innerHTML = "Hello";
+
+            });
+        </script>*@
 
 
         <div class="container body-content">
@@ -92,7 +100,11 @@
             <footer>
                 <p class="footer">&copy; @DateTime.Now - Programmer &copy;</p>
             </footer>
+
         </div>
+
+
+        <script src="~/Scripts/JavaScriptTest.js"></script>
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
